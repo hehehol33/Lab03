@@ -1,0 +1,132 @@
+/* Базові стилі */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-header {
+    background-color: #000;
+    padding: 10px 20px;
+}
+
+/* Головне меню з використанням Flexbox */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Використання Flexbox */
+    justify-content: space-between; /* Розподіл елементів */
+}
+
+.main-nav ul li a {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.main-nav ul li a:hover {
+    background-color: #444;
+}
+
+/* Інформація про курс */
+.course-info {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.course-header h1 {
+    color: #ff6f00;
+    margin-bottom: 10px;
+}
+
+.course-header h2 {
+    color: #333;
+}
+
+/* Контент курсу з використанням Flexbox */
+.course-content {
+    display: flex; /* Використання Flexbox */
+    justify-content: center; /* Центрування контенту */
+    align-items: center; /* Вертикальне вирівнювання */
+    margin-top: 20px;
+}
+
+.course-image img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.course-details ul {
+    list-style: none;
+    text-align: left;
+}
+
+.course-details ul li {
+    margin: 10px 0;
+}
+
+/* Стилі для випускників */
+.graduates-section {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Контейнер випускників з використанням Flexbox */
+.graduates-container {
+    display: flex; /* Використання Flexbox */
+    justify-content: center; /* Центрування блоків */
+    flex-wrap: wrap; /* Перенос блоків на наступний рядок */
+    gap: 20px; /* Відстань між блоками */
+}
+
+/* Окремий блок випускника */
+.graduate {
+    background-color: #ff6f00;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+/* Додаємо стилі для зображень випускників */
+.graduate img {
+    width: 100%; /* Зображення розтягується на всю ширину контейнера */
+    height: auto; /* Зберігається пропорційність зображення */
+    border-radius: 8px; /* Додаємо скруглення кутів */
+    object-fit: cover; /* Забезпечує коректне відображення зображень у контейнері */
+}
+
+.graduate h3 {
+    margin: 10px 0;
+}
+
+/* FAQ секція */
+.faq-section {
+    padding: 20px;
+}
+
+/* Контейнер для елементів FAQ з використанням Flexbox */
+.faq-items {
+    display: flex; /* Використання Flexbox */
+    flex-wrap: wrap; /* Дозволяє перенос блоків */
+    gap: 20px; /* Відстань між блоками */
+    justify-content: center; /* Центрування елементів */
+}
+
+.faq-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 300px;
+}
+
+/* Рекламний блок */
+.advertisement {
+    background-color: #ff6f00;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

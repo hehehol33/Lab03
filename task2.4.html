@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Layout</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .container {
+            width: 90%; /* Гумова ширина */
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header, .footer {
+            height: 10%;
+            background-color: #f4b400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .header {
+            justify-content: center;
+            position: relative;
+        }
+
+        .input {
+            width: 15%; /* Збільшений розмір білого прямокутника */
+            height: 60%;
+            border: 1px solid #000;
+            background-color: #fff;
+            position: absolute;
+            left: 10px;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+        }
+
+        .left, .right {
+            flex: 1;
+            height: 100%;
+        }
+
+        .left {
+            background-color: #4285f4;
+        }
+
+        .right {
+            background-color: #ea4335;
+        }
+
+        .center {
+            display: flex;
+            flex: 3; /* Збільшене співвідношення центральних блоків */
+        }
+
+        .center div {
+            flex: 1;
+            height: 100%;
+            background-color: #ea4335;
+        }
+
+        .center div:nth-child(2) {
+            background-color: #ffffff;
+        }
+
+        .footer {
+            height: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="input"></div>
+            <div style="flex: 1;">1</div>
+        </div>
+        <div class="content">
+            <div class="left">2</div>
+            <div class="center">
+                <div>3</div>
+                <div>4</div>
+            </div>
+            <div class="right">5</div>
+        </div>
+        <div class="footer">6</div>
+    </div>
+</body>
+</html>

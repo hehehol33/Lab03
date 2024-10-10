@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Layout</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .container {
+            width: 800px; /* Фіксована ширина контейнера */
+            margin: 0 auto;
+            height: 600px; /* Фіксована висота */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            height: 10%;
+            background-color: #f4b400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .input {
+            width: 100px;
+            height: 50%;
+            border: 1px solid #000;
+            background-color: #fff;
+            position: absolute;
+            left: 10px;
+        }
+
+        .content {
+            height: 80%;
+            display: flex;
+        }
+
+        .left, .right {
+            width: 15%; /* Фіксована ширина лівого та правого блоків */
+            height: 100%;
+        }
+
+        .left {
+            background-color: #4285f4;
+        }
+
+        .right {
+            background-color: #ea4335;
+        }
+
+        .center {
+            display: flex;
+            width: 70%; /* Фіксована ширина центрального блоку */
+        }
+
+        .center div {
+            flex: 1;
+            height: 100%;
+            background-color: #ea4335;
+        }
+
+        .center div:nth-child(2) {
+            background-color: #ffffff;
+        }
+
+        .footer {
+            height: 10%;
+            background-color: #f4b400;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="input"></div>
+            <div style="flex: 1;">1</div>
+        </div>
+        <div class="content">
+            <div class="left">2</div>
+            <div class="center">
+                <div>3</div>
+                <div>4</div>
+            </div>
+            <div class="right">5</div>
+        </div>
+        <div class="footer">6</div>
+    </div>
+</body>
+</html>
